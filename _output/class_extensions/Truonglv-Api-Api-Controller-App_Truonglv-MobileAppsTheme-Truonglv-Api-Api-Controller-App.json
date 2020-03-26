@@ -1,0 +1,6 @@
+{
+    "from_class": "Truonglv\\Api\\Api\\Controller\\App",
+    "to_class": "Truonglv\\MobileAppsTheme\\Truonglv\\Api\\Api\\Controller\\App",
+    "execute_order": 10,
+    "active": true
+}

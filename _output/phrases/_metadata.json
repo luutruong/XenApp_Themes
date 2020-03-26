@@ -1,0 +1,26 @@
+{
+    "admin_navigation.tMobileApps_theme.txt": {
+        "global_cache": false,
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "c0f200057aceffec8a136d6651de63f9"
+    },
+    "tmobile_apps_theme_dark.txt": {
+        "global_cache": false,
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "a18366b217ebf811ad1886e4f4f865b2"
+    },
+    "tmobile_apps_theme_light.txt": {
+        "global_cache": false,
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "9914a0ce04a7b7b6a8e39bec55064b82"
+    },
+    "tmobile_apps_theme_setup.txt": {
+        "global_cache": false,
+        "version_id": 1000000,
+        "version_string": "1.0.0",
+        "hash": "f6c9efa2f7209fe9068e77325f20bf5d"
+    }
+}

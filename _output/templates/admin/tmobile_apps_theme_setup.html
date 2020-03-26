@@ -1,0 +1,55 @@
+<xf:title>{{ phrase('tmobile_apps_theme_setup') }}</xf:title>
+
+<xf:form class="block">
+    <div class="block-outer">
+        <xf:inforow rowtype="confirm">
+            Please read following thread: <a href="https://nobita.me/threads/35185/" target="_blank">App layout structure</a>
+            to make color work best in your app.
+        </xf:inforow>
+    </div>
+
+    <div class="block-container">
+        <div class="block-body">
+            <h2 class="block-tabHeader tabs hScroller"
+                data-xf-init="tabs h-scroller"
+                data-panes=".js-memberTabPanes"
+                data-state="replace"
+                role="tablist">
+                <span class="hScroller-scroll">
+                    <a href="#theme-light" class="tabs-tab is-active"
+                       role="tab"
+                       aria-controls="theme-light">{{ phrase('tmobile_apps_theme_light') }}</a>
+                    <a href="#theme-dark" class="tabs-tab"
+                       role="tab"
+                       aria-controls="theme-dark">{{ phrase('tmobile_apps_theme_dark') }}</a>
+                </span>
+            </h2>
+            <ul class="tabPanes js-memberTabPanes">
+               <li class="is-active" role="tab-panel" id="theme-light">
+                   <xf:formrow label="Property">
+                       <xf:foreach loop="{$dataSource.light}" value="$propertyValue" key="$propertyId">
+                           <div class="inputGroup" style="margin-bottom: 10px">
+                               <xf:textbox disabled="true" value="{$propertyId}"/>
+                               <xf:textbox name="data[light][{$propertyId}]"
+                                           value="{{ $themed.light.{$propertyId} ? $themed.light.{$propertyId} : $propertyValue }}"/>
+                           </div>
+                       </xf:foreach>
+                   </xf:formrow>
+               </li>
+                <li role="tab-panel" id="theme-dark">
+                    <xf:formrow label="Property">
+                        <xf:foreach loop="{$dataSource.dark}" value="$propertyValue" key="$propertyId">
+                            <div class="inputGroup" style="margin-bottom: 10px">
+                                <xf:textbox disabled="true" value="{$propertyId}"/>
+                                <xf:textbox name="data[dark][{$propertyId}]"
+                                            value="{{ $themed.dark.{$propertyId} ? $themed.dark.{$propertyId} : $propertyValue }}"/>
+                            </div>
+                        </xf:foreach>
+                    </xf:formrow>
+                </li>
+            </ul>
+        </div>
+
+        <xf:submitrow icon="save" sticky="true"/>
+    </div>
+</xf:form>
